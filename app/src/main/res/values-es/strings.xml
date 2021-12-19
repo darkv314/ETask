@@ -2,4 +2,18 @@
 <resources>
     <string name="app_name">ETask</string>
     <string name="titleVoiceForm">Ingresa los datos de la tarea por voz</string>
+    <string name="uploadTitle">Título de la tarea</string>
+    <string name="uploadDescription">Descripción de la tarea</string>
+    <string name="uploadDateStart">Plazo de inicio de la tarea</string>
+    <string name="uploadDateEnd">Plazo de fin de la tarea</string>
+    <string name="required">Se requiere este dato</string>
+    <string name="sendData">Enviar datos y crear tarea</string>
+    <string name="tituloMissing">Se requiere el título de la tarea</string>
+    <string name="descripcionMissing">Se requiere la descripción de la tarea</string>
+    <string name="startDateMissing">Se requiere la fecha de inicio de la tarea</string>
+    <string name="endDateMissing">Se requiere la fecha de fin de la tarea</string>
+    <string name="emptySpaces">Faltan datos</string>
+    <string name="titleForm">Información de la tarea</string>
+    <string name="sendInfo">Enviar información</string>
+    <string name="uploadPhotoDesc">Sólo fotos: .jpg o .png</string>
 </resources>

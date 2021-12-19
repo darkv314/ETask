@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/formTareaFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -20,15 +20,21 @@
         android:name="com.example.etask.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
+
         <action
-            android:id="@+id/action_SecondFragment_to_FormularioPorVozDialog"
-            app:destination="@id/FormularioPorVozDialog" />
+            android:id="@+id/action_SecondFragment_to_formTareaPorVozFragment"
+            app:destination="@id/formTareaPorVozFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/FormularioPorVozDialog"
-        android:name="com.example.etask.FormularioPorVozDialog"
-        android:label="dialog_formularioporvoz"
-        tools:layout="@layout/dialog_formularioporvoz"
-        />
+        android:id="@+id/formTareaPorVozFragment"
+        android:name="com.example.etask.FormTareaPorVozFragment"
+        android:label="FormTareaPorVozFragment"
+        tools:layout="@layout/fragment_voiceformtask"/>
+    <fragment
+        android:id="@+id/formTareaFragment"
+        android:name="com.example.etask.FormTareaFragment"
+        android:label="FormTareaFragment"
+        tools:layout="@layout/fragment_formtask"/>
 
 </navigation>

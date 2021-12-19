@@ -35,7 +35,7 @@ public class SecondFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                controller.navigate(R.id.action_SecondFragment_to_FormularioPorVozDialog);
+                controller.navigate(R.id.action_SecondFragment_to_formTareaPorVozFragment);
             }
         });
     }
