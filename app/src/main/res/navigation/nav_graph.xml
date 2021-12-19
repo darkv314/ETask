@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/colorSelectFragment">
+    app:startDestination="@id/fragmentSendApp">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -46,6 +46,11 @@
         android:name="com.example.etask.ColorSelectFragment"
         android:label="ColorSelectFragment"
         tools:layout="@layout/fragment_designform"/>
+    <fragment
+        android:id="@+id/fragmentSendApp"
+        android:name="com.example.etask.FragmentSendApp"
+        android:label="FragmentSendApp"
+        tools:layout="@layout/fragment_send"/>
 
 
 </navigation>

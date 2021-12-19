@@ -30,4 +30,10 @@
     <string name="purpleCol">Purpura</string>
     <string name="redCol">Rojo</string>
     <string name="yellowCol">Amarillo</string>
+    <string name="shareForm">Compartir tarea</string>
+    <string name="sharetoApp">Compartir a app aparte</string>
+    <string name="sendToFriend">Enviar tarea</string>
+    <string name="shareVia">Enviar mediante</string>
+    <string name="searchUser">Buscar por nombre de usuario</string>
+    <string name="orSearchFriend">O busca a un amigo</string>
 </resources>
