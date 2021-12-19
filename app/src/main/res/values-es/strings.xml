@@ -16,4 +16,18 @@
     <string name="titleForm">Información de la tarea</string>
     <string name="sendInfo">Enviar información</string>
     <string name="uploadPhotoDesc">Sólo fotos: .jpg o .png</string>
+    <string name="sureOfDelete">¿Borrar la tarea \"Realizar la pantalla de inicio\"?</string>
+    <string name="cantBeReversed">Esta acción no se podrá revertir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="deleteTask">Borrar Tarea</string>
+    <string name="designForm">Cambiar el diseño de la app</string>
+    <string name="selectDesign">Seleccionar diseño</string>
+    <string name="cyanCol">Cyan</string>
+    <string name="whiteCol">Blanco</string>
+    <string name="greyCol">Gris</string>
+    <string name="blueCol">Azul</string>
+    <string name="darkblueCol">Azul oscuro</string>
+    <string name="purpleCol">Purpura</string>
+    <string name="redCol">Rojo</string>
+    <string name="yellowCol">Amarillo</string>
 </resources>

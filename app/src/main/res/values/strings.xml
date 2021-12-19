@@ -24,5 +24,19 @@
     <string name="titleForm">Task information</string>
     <string name="sendInfo">Send information</string>
     <string name="uploadPhotoDesc">Photo only: .jpg or .png</string>
+    <string name="sureOfDelete">Delete the task \"Initial screen\"?</string>
+    <string name="cantBeReversed">This action can not be undone</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleteTask">Delete task</string>
+    <string name="designForm">Change the app\'s design</string>
+    <string name="selectDesign">Select design</string>
+    <string name="cyanCol">Cyan</string>
+    <string name="whiteCol">White</string>
+    <string name="greyCol">Grey</string>
+    <string name="blueCol">Blue</string>
+    <string name="darkblueCol">Dark blue</string>
+    <string name="purpleCol">Purple</string>
+    <string name="redCol">Red</string>
+    <string name="yellowCol">Yellow</string>
 
 </resources>
