@@ -20,9 +20,15 @@
         android:name="com.example.etask.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_FormularioPorVozDialog"
+            app:destination="@id/FormularioPorVozDialog" />
     </fragment>
+    <fragment
+        android:id="@+id/FormularioPorVozDialog"
+        android:name="com.example.etask.FormularioPorVozDialog"
+        android:label="dialog_formularioporvoz"
+        tools:layout="@layout/dialog_formularioporvoz"
+        />
+
 </navigation>
