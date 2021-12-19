@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/taskDescriptionFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -22,7 +22,60 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_formTareaPorVozFragment"
+            app:destination="@id/formTareaPorVozFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/formTareaPorVozFragment"
+        android:name="com.example.etask.FormTareaPorVozFragment"
+        android:label="FormTareaPorVozFragment"
+        tools:layout="@layout/fragment_voiceformtask"/>
+    <fragment
+        android:id="@+id/formTareaFragment"
+        android:name="com.example.etask.FormTareaFragment"
+        android:label="FormTareaFragment"
+        tools:layout="@layout/fragment_formtask"/>
+    <dialog
+        android:id="@+id/confirmEraseFragment"
+        android:name="com.example.etask.ConfirmEraseFragment"
+        android:label="ConfirmEraseFragment"
+        tools:layout="@layout/fragment_deleteonetask"/>
+    <fragment
+        android:id="@+id/colorSelectFragment"
+        android:name="com.example.etask.ColorSelectFragment"
+        android:label="ColorSelectFragment"
+        tools:layout="@layout/fragment_designform"/>
+    <dialog
+        android:id="@+id/fragmentSendApp"
+        android:name="com.example.etask.FragmentSendApp"
+        android:label="FragmentSendApp"
+        tools:layout="@layout/fragment_send"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.etask.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        >
+        <action
+            android:id="@+id/action_profileFragment_to_colorSelectFragment"
+            app:destination="@id/colorSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDescriptionFragment"
+        android:name="com.example.etask.TaskDescriptionFragment"
+        android:label="TaskDescriptionFragment"
+        tools:layout="@layout/fragment_task_details"
+        >
+        <action
+            android:id="@+id/action_taskDescriptionFragment_to_confirmEraseFragment"
+            app:destination="@id/confirmEraseFragment" />
+        <action
+            android:id="@+id/action_taskDescriptionFragment_to_fragmentSendApp"
+            app:destination="@id/fragmentSendApp" />
+
+
+    </fragment>
+
+
 </navigation>

@@ -1,12 +1,55 @@
 <resources>
     <string name="app_name">ETask</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="titleVoiceForm">Enter the task data with voice commands</string>
+    <string name="required">This data is required</string>
+    <string name="uploadTitle">Task title</string>
+    <string name="uploadDescription">Task description</string>
+    <string name="uploadDateStart">Task beginning date</string>
+    <string name="uploadDateEnd">Task finish date</string>
+    <string name="sendData">Send data and create task</string>
+    <string name="tituloMissing">Task title required</string>
+    <string name="descripcionMissing">Task description missing</string>
+    <string name="startDateMissing">Task start date missing</string>
+    <string name="endDateMissing">Task end date missing</string>
+    <string name="emptySpaces">Missing data</string>
+    <string name="titleForm">Task information</string>
+    <string name="sendInfo">Send information</string>
+    <string name="uploadPhotoDesc">Photo only: .jpg or .png</string>
+    <string name="sureOfDelete">Delete the task \"Initial screen\"?</string>
+    <string name="cantBeReversed">This action can not be undone</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleteTask">Delete task</string>
+    <string name="designForm">Change the app\'s design</string>
+    <string name="selectDesign">Select design</string>
+    <string name="cyanCol">Cyan</string>
+    <string name="whiteCol">White</string>
+    <string name="greyCol">Grey</string>
+    <string name="blueCol">Blue</string>
+    <string name="darkblueCol">Dark blue</string>
+    <string name="purpleCol">Purple</string>
+    <string name="redCol">Red</string>
+    <string name="yellowCol">Yellow</string>
+    <string name="shareForm">Share task</string>
+    <string name="sharetoApp">Share to external app</string>
+    <string name="orSearchFriend">Or search for a friend</string>
+    <string name="searchUser">Search by username</string>
+    <string name="shareVia">Share via</string>
+    <string name="sendToFriend">Send task</string>
+    <string name="userEditInfo">Edit user info</string>
+    <string name="configInfo">App settings</string>
+    <string name="designInfo">Change UI design</string>
+    <string name="darkModeInfo">Toggle Dark Mode</string>
+    <string name="faqInfo">FAQ</string>
+    <string name="inicio">Start Date</string>
+    <string name="fin">End Date</string>
+
 </resources>
