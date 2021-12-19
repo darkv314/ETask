@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.etask.databinding.FragmentSecondBinding;
 import com.example.etask.databinding.FragmentVoiceformtaskBinding;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -29,9 +30,16 @@ import java.util.Locale;
 public class FormTareaPorVozFragment extends Fragment {
     private FragmentVoiceformtaskBinding binding;
 
+
+
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding=FragmentVoiceformtaskBinding.inflate(inflater,container,false);
+    public View onCreateView(
+            LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState
+    ) {
+
+        binding = FragmentVoiceformtaskBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 

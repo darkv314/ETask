@@ -96,6 +96,7 @@
         app:layout_constraintBottom_toTopOf="@id/searcher"
         />
 
+
     <AutoCompleteTextView
         android:id="@+id/searcher"
         android:layout_width="match_parent"
@@ -106,10 +107,25 @@
         app:layout_constraintStart_toStartOf="@id/formFrame"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
+        android:paddingStart="10dp"
         android:hint="@string/searchUser"
         android:completionThreshold="1"
         android:completionHint="@string/searchUser"
-        android:background="#fbf5f3"/>
+        android:textColorHint="@color/primaryVariant"
+        android:textColor="@color/primaryVariant"
+        android:background="@drawable/search_frame"/>
+
+    <ImageView
+        android:id="@+id/iconSearch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        app:tint="@color/primaryVariant"
+        android:src="@drawable/ic_buscar"
+        app:layout_constraintEnd_toEndOf="@id/searcher"
+        app:layout_constraintTop_toTopOf="@id/searcher"
+        app:layout_constraintBottom_toBottomOf="@id/searcher"
+        />
 
 
     <ImageView

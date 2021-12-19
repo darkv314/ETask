@@ -11,11 +11,12 @@ import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.example.etask.databinding.FragmentSendBinding;
 
-public class FragmentSendApp extends Fragment {
+public class FragmentSendApp extends DialogFragment {
     private FragmentSendBinding binding;
     private final static String[] Users=new String[]{
             "Nickquoland","NickyNick","NickySmalls","Biggie","Bernie","Andres","Andro77","Nicole"

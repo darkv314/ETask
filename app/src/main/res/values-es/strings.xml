@@ -36,4 +36,11 @@
     <string name="shareVia">Enviar mediante</string>
     <string name="searchUser">Buscar por nombre de usuario</string>
     <string name="orSearchFriend">O busca a un amigo</string>
+    <string name="userEditInfo">Editar la informacion del usuario</string>
+    <string name="configInfo">Configuracion de la aplicación</string>
+    <string name="designInfo">Cambiar diseño de interfaz</string>
+    <string name="darkModeInfo">Habilitar modo noche</string>
+    <string name="faqInfo">Preguntas y respuestas frecuentes</string>
+    <string name="inicio">Desde</string>
+    <string name="fin">Hasta</string>
 </resources>

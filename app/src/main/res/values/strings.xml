@@ -44,5 +44,12 @@
     <string name="searchUser">Search by username</string>
     <string name="shareVia">Share via</string>
     <string name="sendToFriend">Send task</string>
+    <string name="userEditInfo">Edit user info</string>
+    <string name="configInfo">App settings</string>
+    <string name="designInfo">Change UI design</string>
+    <string name="darkModeInfo">Toggle Dark Mode</string>
+    <string name="faqInfo">FAQ</string>
+    <string name="inicio">Start Date</string>
+    <string name="fin">End Date</string>
 
 </resources>
