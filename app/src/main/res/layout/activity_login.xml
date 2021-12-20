@@ -43,7 +43,7 @@
                     android:text="Ingresar con correo"
                     android:textStyle="bold"
                     android:drawableLeft="@drawable/ic_mail"
-                    android:background="@drawable/form_shape"
+                    android:backgroundTint="@color/primaryVariant"
                     android:layout_marginBottom="20dp">
                 </Button>
 
@@ -54,7 +54,7 @@
                     android:layout_alignBottom="@id/bienvenida"
                     android:text="Ingresar como invitado"
                     android:drawableLeft="@drawable/ic_mail"
-                    android:background="@drawable/text_edit"
+                    android:backgroundTint="@color/primaryVariant"
                     android:textStyle="bold">
                 </Button>
             </LinearLayout>
@@ -78,7 +78,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/form_shape"
+                android:backgroundTint="@color/primaryVariant"
                 android:text="   Ingresar con correo   "
                 android:textStyle="bold"
                 android:drawableLeft="@drawable/ic_mail"
