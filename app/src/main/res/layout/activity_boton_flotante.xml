@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BotonFlotanteActivity">
+
+
+    <com.github.clans.fab.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fab_colorNormal="@color/primary"
+        android:src="@drawable/search"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="10dp"
+        app:fab_colorPressed="@color/secondary"
+        android:id="@+id/search"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+    </com.github.clans.fab.FloatingActionButton>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_colorNormal="@color/primary"
+        app:menu_icon="@drawable/delete"
+        android:layout_marginRight="170dp"
+        android:layout_marginBottom="10dp"
+        app:menu_colorPressed="@color/secondary"
+        app:menu_fab_label="Eliminar"
+        android:id="@+id/deleteMenu">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fab_colorNormal="@color/primary"
+            android:src="@drawable/day"
+            app:fab_colorPressed="@color/secondary"
+            app:fab_label="Una sola tarea"
+            android:id="@+id/deleteTask">
+
+        </com.github.clans.fab.FloatingActionButton>
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fab_colorNormal="@color/primary"
+            android:src="@drawable/calendar"
+            app:fab_colorPressed="@color/secondary"
+            app:fab_label="Tareas de un dia"
+            android:id="@+id/deleteDay">
+
+        </com.github.clans.fab.FloatingActionButton>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/addMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="10dp"
+        app:menu_colorNormal="@color/primary"
+        app:menu_colorPressed="@color/secondary"
+        app:menu_fab_label="Añadir"
+        app:menu_icon="@drawable/add"
+        app:menu_labels_position="right">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addDetailedTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/detail"
+            app:fab_colorNormal="@color/primary"
+            app:fab_colorPressed="@color/secondary"
+            app:fab_label="Tarea detallada">
+
+        </com.github.clans.fab.FloatingActionButton>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addTaskVoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/voice"
+            app:fab_colorNormal="@color/primary"
+            app:fab_colorPressed="@color/secondary"
+            app:fab_label="Tareas por voz">
+
+        </com.github.clans.fab.FloatingActionButton>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addQuickTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/fast"
+            app:fab_colorNormal="@color/primary"
+            app:fab_colorPressed="@color/secondary"
+            app:fab_label="Tarea rapida">
+
+        </com.github.clans.fab.FloatingActionButton>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extendedDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/primary"
+        android:gravity="end"
+        android:text="Borrar tareas del dia"
+        app:icon="@drawable/delete">
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+</RelativeLayout>

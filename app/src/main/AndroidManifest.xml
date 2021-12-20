@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ETask">
+        <!--
         <activity
-            android:name=".MainActivity"
+            android:name=".BotonFlotanteActivity"
+            android:exported="false" />
+            -->
+        <activity
+            android:name=".BotonFlotanteActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ETask.NoActionBar">
@@ -20,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
