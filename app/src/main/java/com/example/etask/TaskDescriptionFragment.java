@@ -9,13 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.etask.databinding.FragmentSecondBinding;
+import com.example.etask.databinding.FragmentTaskDetailsBinding;
 
-public class SecondFragment extends Fragment {
-
-    private FragmentSecondBinding binding;
+public class TaskDescriptionFragment extends Fragment {
+    private FragmentTaskDetailsBinding binding;
 
     @Override
     public View onCreateView(
@@ -23,7 +22,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentTaskDetailsBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -32,18 +31,17 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final NavController controller= Navigation.findNavController(view);
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+        binding.btnDeleteTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                controller.navigate(R.id.action_SecondFragment_to_formTareaPorVozFragment);
+                controller.navigate(R.id.action_taskDescriptionFragment_to_confirmEraseFragment);
+            }
+        });
+        binding.btnShareTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                controller.navigate(R.id.action_taskDescriptionFragment_to_fragmentSendApp);
             }
         });
     }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
-
 }
