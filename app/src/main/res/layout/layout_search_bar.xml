@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/barraBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/background">
+
+        <ImageButton
+            android:id="@+id/imageFilterView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/search"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/primary"/>
+
+        <EditText
+            android:id="@+id/buscador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/imageFilterView"
+            android:paddingLeft="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="150dp"
+            android:hint="Buscar una tarea"
+            android:background="@color/background">
+
+
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinnerSearch"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/background">
+
+
+        </Spinner>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
