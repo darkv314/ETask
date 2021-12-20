@@ -20,6 +20,7 @@ import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
+
 import java.util.Calendar;
 
 public class BotonFlotanteActivity extends AppCompatActivity {
@@ -104,7 +105,23 @@ public class BotonFlotanteActivity extends AppCompatActivity {
                 showCreateQuickDialog();
             }
         });
+
+        addVoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        addDetailed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
+
+
 
     private void showWarningDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(BotonFlotanteActivity.this, R.style.AlertDialogTheme);
