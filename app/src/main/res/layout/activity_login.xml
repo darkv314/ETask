@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/bienvenida"
                     android:text="Ingresar como invitado"
-                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawableLeft="@drawable/ic_user"
                     android:backgroundTint="@color/primaryVariant"
                     android:textStyle="bold">
                 </Button>
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/primaryVariant"
-                android:text="   Ingresar con correo   "
+                android:text="Registrate "
                 android:textStyle="bold"
                 android:drawableLeft="@drawable/ic_mail"
                 android:layout_marginBottom="25dp">
