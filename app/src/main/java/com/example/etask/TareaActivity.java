@@ -22,7 +22,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 import java.util.Calendar;
 
-public class BotonFlotanteActivity extends AppCompatActivity {
+public class TareaActivity extends AppCompatActivity {
     FloatingActionMenu addMenu, deleteMenu;
     FloatingActionButton addQuick, addVoice, addDetailed;
     FloatingActionButton deleteDay, deleteTask;
@@ -37,7 +37,7 @@ public class BotonFlotanteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boton_flotante);
+        setContentView(R.layout.activity_tareas);
         initViews();
         addEvents();
     }
@@ -64,7 +64,7 @@ public class BotonFlotanteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        BotonFlotanteActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        TareaActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         month = month+1;
@@ -104,11 +104,41 @@ public class BotonFlotanteActivity extends AppCompatActivity {
                 showCreateQuickDialog();
             }
         });
+
+        addVoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCreateVoiceDialog();
+            }
+        });
+    }
+
+    private void showCreateVoiceDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(TareaActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(TareaActivity.this).inflate(
+                R.layout.fragment_voiceformtask,
+                (ConstraintLayout)findViewById(R.id.voiceLayout)
+        );
+        builder.setView(view);
+
+        final AlertDialog alertDialog = builder.create();
+        view.findViewById(R.id.btnSendVoiceTask).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+
+        if(alertDialog.getWindow() !=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+
+        alertDialog.show();
     }
 
     private void showWarningDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(BotonFlotanteActivity.this, R.style.AlertDialogTheme);
-        View view = LayoutInflater.from(BotonFlotanteActivity.this).inflate(
+        AlertDialog.Builder builder = new AlertDialog.Builder(TareaActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(TareaActivity.this).inflate(
                 R.layout.layout_delete_dialog,
                 (ConstraintLayout)findViewById(R.id.laoyutDelete)
         );
@@ -146,15 +176,15 @@ public class BotonFlotanteActivity extends AppCompatActivity {
     }
 
     private void showSearchDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(BotonFlotanteActivity.this, R.style.AlertDialogTheme);
-        View view = LayoutInflater.from(BotonFlotanteActivity.this).inflate(
+        AlertDialog.Builder builder = new AlertDialog.Builder(TareaActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(TareaActivity.this).inflate(
                 R.layout.layout_search_bar,
                 (ConstraintLayout)findViewById(R.id.barraBuscar)
         );
         builder.setView(view);
 
         Spinner s = ((Spinner) view.findViewById(R.id.spinnerSearch));
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(BotonFlotanteActivity.this,
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(TareaActivity.this,
                 R.array.planets_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter);
@@ -177,8 +207,8 @@ public class BotonFlotanteActivity extends AppCompatActivity {
     }
 
     private void showCreateQuickDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(BotonFlotanteActivity.this, R.style.AlertDialogTheme);
-        View view = LayoutInflater.from(BotonFlotanteActivity.this).inflate(
+        AlertDialog.Builder builder = new AlertDialog.Builder(TareaActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(TareaActivity.this).inflate(
                 R.layout.layout_tarea_rapida,
                 (ConstraintLayout)findViewById(R.id.laoyutCreate)
         );
