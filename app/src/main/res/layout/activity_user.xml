@@ -2,14 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/form_shape"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
@@ -26,32 +25,40 @@
                 android:layout_marginVertical="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bienvenido, {usuario}"
-                android:textSize="25dp"
+                android:text="@string/welcome"
+                android:fontFamily="@font/lato"
+                android:textSize="35dp"
                 android:textStyle="bold">
             </TextView>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:gravity="center">
                 <EditText
                     android:textSize="20dp"
                     android:paddingLeft="25dp"
                     android:paddingVertical="15dp"
+                    android:fontFamily="@font/poppins"
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:drawableStart="@drawable/ic_user"
                     android:layout_height="wrap_content"
                     android:hint="   Usuario"
+
                     android:background="@drawable/form_shape">
                 </EditText>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Con contraseña"
+                    android:text="@string/passwordAdmit"
+                    android:fontFamily="@font/lato"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
                     android:layout_marginBottom="5dp">
                 </RadioButton>
 
@@ -61,6 +68,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:paddingLeft="25dp"
+                    android:fontFamily="@font/poppins"
                     android:paddingVertical="15dp"
                     android:drawableStart="@drawable/ic_baseline_remove_red_eye_24"
                     android:layout_height="wrap_content"
@@ -71,20 +79,48 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recuerda mi sesión"
+                    android:text="@string/rememberMe"
+                    android:fontFamily="@font/lato"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
                     android:layout_marginBottom="5dp">
                 </RadioButton>
 
-                <Button
-                    android:layout_marginBottom="25dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="80dp"
-                    android:text="Iniciar sesión"
 
-                    android:background="@drawable/text_edit"
-                    android:textStyle="bold">
-                </Button>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/userInfoFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignStart="@+id/userInfoFrame"
+                        android:layout_alignTop="@+id/userInfoFrame"
+                        android:layout_alignEnd="@+id/userInfoFrame"
+                        android:layout_alignBottom="@+id/userInfoFrame"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="62dp"
+                        android:layout_marginBottom="9dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/logIn"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

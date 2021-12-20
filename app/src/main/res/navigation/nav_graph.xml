@@ -76,6 +76,13 @@
 
 
     </fragment>
+    <activity
+        android:id="@+id/tareaActivity"
+        android:name="com.example.etask.TareaActivity"
+        android:label="TareaActivity"
+        tools:layout="@layout/activity_tareas"/>
+
+
 
 
 </navigation>

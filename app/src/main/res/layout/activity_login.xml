@@ -1,92 +1,212 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
-    
-    <LinearLayout
-        android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/formFrame1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/primarymenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/formFrame2"
+        />
+
+    <TextView
+        android:id="@+id/textFormTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/form_shape"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/bienvenida"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:fontFamily="@font/lato"
+        android:textColor="?attr/colorOnPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/formFrame1"
+        app:layout_constraintStart_toStartOf="@id/formFrame1"
+        app:layout_constraintTop_toTopOf="@id/formFrame1"
+        app:layout_constraintBottom_toTopOf="@id/buttonCorreo"
 
-        <LinearLayout
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/primarymenu"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_marginTop="30dp"
-                android:id="@+id/bienvenida"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bienvenid@!"
-                android:textSize="25dp"
-                android:textStyle="bold">
-            </TextView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="30dp">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/bienvenida"
-                    android:text="Ingresar con correo"
-                    android:textStyle="bold"
-                    android:drawableLeft="@drawable/ic_mail"
-                    android:backgroundTint="@color/primaryVariant"
-                    android:layout_marginBottom="20dp">
-                </Button>
+        />
 
-                <Button
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/bienvenida"
-                    android:text="Ingresar como invitado"
-                    android:drawableLeft="@drawable/ic_user"
-                    android:backgroundTint="@color/primaryVariant"
-                    android:textStyle="bold">
-                </Button>
-            </LinearLayout>
-        </LinearLayout>
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/primarymenu"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="¿Aún no estás registrado?"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:layout_marginVertical="25dp">
-            </TextView>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/primaryVariant"
-                android:text="Registrate "
-                android:textStyle="bold"
-                android:drawableLeft="@drawable/ic_mail"
-                android:layout_marginBottom="25dp">
-            </Button>
-        </LinearLayout>
-        
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/buttonCorreo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@id/formFrame1"
+        app:layout_constraintStart_toStartOf="@id/formFrame1"
+        app:layout_constraintTop_toBottomOf="@id/textFormTitle"
+        app:layout_constraintBottom_toTopOf="@id/buttonInvitado"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/button"
+        />
+
+    <ImageView
+        android:id="@+id/mailBtnicon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/buttonCorreo"
+        app:layout_constraintTop_toTopOf="@id/buttonCorreo"
+        app:layout_constraintBottom_toBottomOf="@id/buttonCorreo"
+        android:src="@drawable/ic_mail"
+        />
+
+    <TextView
+        android:id="@+id/mailButtonIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/buttonCorreo"
+        app:layout_constraintEnd_toEndOf="@id/buttonCorreo"
+        app:layout_constraintTop_toTopOf="@id/buttonCorreo"
+        android:text="@string/asMail" />
 
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/buttonInvitado"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@id/formFrame1"
+        app:layout_constraintStart_toStartOf="@id/formFrame1"
+        app:layout_constraintTop_toBottomOf="@id/buttonCorreo"
+        app:layout_constraintBottom_toBottomOf="@id/formFrame1"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/button"
+        />
+
+    <ImageView
+        android:id="@+id/faqBtnicon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/buttonInvitado"
+        app:layout_constraintTop_toTopOf="@id/buttonInvitado"
+        app:layout_constraintBottom_toBottomOf="@id/buttonInvitado"
+
+        android:src="@drawable/ic_usuario"
+        />
+
+    <TextView
+        android:id="@+id/inviButtonIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/buttonInvitado"
+        app:layout_constraintEnd_toEndOf="@id/buttonInvitado"
+        app:layout_constraintTop_toTopOf="@id/buttonInvitado"
+        android:text="@string/asGuest" />
+
+    <ImageView
+        android:id="@+id/formFrame2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        android:src="@drawable/primarymenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formFrame1"
+        />
+
+    <TextView
+        android:id="@+id/textFormTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/noregister"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:fontFamily="@font/lato"
+        android:textColor="?attr/colorOnPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/formFrame2"
+        app:layout_constraintStart_toStartOf="@id/formFrame2"
+        app:layout_constraintTop_toTopOf="@id/formFrame2"
+        />
+
+    <ImageView
+        android:id="@+id/buttonRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@id/formFrame2"
+        app:layout_constraintStart_toStartOf="@id/formFrame2"
+        app:layout_constraintTop_toBottomOf="@id/textFormTitle2"
+        app:layout_constraintBottom_toBottomOf="@id/formFrame2"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/button"
+        />
+
+    <ImageView
+        android:id="@+id/regiBtnicon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="@id/buttonRegister"
+        app:layout_constraintTop_toTopOf="@id/buttonRegister"
+        app:layout_constraintBottom_toBottomOf="@id/buttonRegister"
+        app:layout_constraintEnd_toStartOf="@id/regButtonIcon"
+        android:src="@drawable/ic_mail"
+        />
+
+    <TextView
+        android:id="@+id/regButtonIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/buttonRegister"
+        app:layout_constraintEnd_toEndOf="@id/buttonRegister"
+        app:layout_constraintTop_toTopOf="@id/buttonRegister"
+        android:text="@string/register" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

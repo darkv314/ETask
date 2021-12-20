@@ -1,19 +1,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/form_shape"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
         <LinearLayout
+            android:id="@+id/frameForm"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +35,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
                 <EditText
                     android:textSize="20dp"
                     android:layout_marginBottom="20dp"
@@ -48,16 +51,39 @@
                     android:background="@drawable/form_shape">
                 </EditText>
 
-                <Button
-                    android:layout_marginBottom="25dp"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/bienvenida"
-                    android:text="Verificar e iniciar sesión"
+                    android:layout_marginBottom="30dp"
+                    >
 
-                    android:background="@drawable/text_edit"
-                    android:textStyle="bold">
-                </Button>
+                    <ImageView
+                        android:id="@+id/userInfoFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignStart="@+id/userInfoFrame"
+                        android:layout_alignTop="@+id/userInfoFrame"
+                        android:layout_alignEnd="@+id/userInfoFrame"
+                        android:layout_alignBottom="@+id/userInfoFrame"
+                        android:layout_marginStart="54dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="62dp"
+                        android:layout_marginBottom="9dp"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:textSize="17dp"
+                       android:text="@string/verifyAndDoSession" />
+
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

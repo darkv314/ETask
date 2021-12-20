@@ -51,5 +51,19 @@
     <string name="faqInfo">FAQ</string>
     <string name="inicio">Start Date</string>
     <string name="fin">End Date</string>
+    <string name="bienvenida">Welcome</string>
+    <string name="asGuest">Log in as Guest</string>
+    <string name="asMail">Log in with Email</string>
+    <string name="noregister">Not signed in our app?</string>
+    <string name="register">Create a new account</string>
+    <string name="verifyAndDoSession">Check and log in</string>
+    <string name="enterAsGuest">Log in as a guest</string>
+    <string name="guestUname">Guest username</string>
+    <string name="logInGuested">Log in as guest</string>
+    <string name="rememberMe">Remember my session</string>
+    <string name="welcome">Welcome back!</string>
+    <string name="passwordAdmit">Use password</string>
+    <string name="logIn">Log in</string>
+    <string name="useitnow">Start using ETask now!</string>
 
 </resources>
