@@ -1,22 +1,34 @@
 package com.example.etask;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+
 import android.content.Context;
+
+import android.content.Intent;
+
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+
 import android.widget.ListView;
+
+import android.widget.EditText;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +36,7 @@ import android.widget.Toast;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -144,6 +157,47 @@ public class TareaActivity extends AppCompatActivity {
                 showCreateVoiceDialog();
             }
         });
+
+        addDetailed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCreateDetailedDialog();
+
+            }
+        });
+    }
+
+    private void showCreateDetailedDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(TareaActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(TareaActivity.this).inflate(
+                R.layout.fragment_formtask,
+                (ConstraintLayout)findViewById(R.id.detailedLayout)
+        );
+        builder.setView(view);
+
+        final AlertDialog alertDialog = builder.create();
+        view.findViewById(R.id.btnSendTask).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+
+        view.findViewById(R.id.photoClickView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+                    pickImageFromGalery();
+
+                }
+            }
+        });
+
+        if(alertDialog.getWindow() !=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+
+        alertDialog.show();
     }
 
     private void showCreateVoiceDialog(){
@@ -161,6 +215,8 @@ public class TareaActivity extends AppCompatActivity {
                 alertDialog.dismiss();
             }
         });
+
+
 
         if(alertDialog.getWindow() !=null){
             alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
@@ -260,5 +316,17 @@ public class TareaActivity extends AppCompatActivity {
         }
 
         alertDialog.show();
+    }
+    private void pickImageFromGalery(){
+        Intent intent= new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent,100);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==100 && resultCode==RESULT_OK){
+        }
     }
 }

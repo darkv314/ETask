@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/loginFragment2">
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.etask.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/activity_login">
+        <action
+            android:id="@+id/action_loginFragment2_to_correoFragment"
+            app:destination="@id/correoFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_invitadoFragment"
+            app:destination="@id/invitadoFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/correoFragment"
+        android:name="com.example.etask.CorreoFragment"
+        android:label="CorreoFragment"
+        tools:layout="@layout/activity_correo">
+        <action
+            android:id="@+id/action_correoFragment_to_userWelcomeFragment"
+            app:destination="@id/userWelcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invitadoFragment"
+        android:name="com.example.etask.InvitadoFragment"
+        android:label="InvitadoFragment"
+        tools:layout="@layout/activity_invitado">
+        <action
+            android:id="@+id/action_invitadoFragment_to_tareaActivity2"
+            app:destination="@id/tareaActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/userWelcomeFragment"
+        android:name="com.example.etask.UserWelcomeFragment"
+        android:label="UserWelcomeFragment"
+        tools:layout="@layout/activity_user">
+        <action
+            android:id="@+id/action_userWelcomeFragment_to_tareaActivity2"
+            app:destination="@id/tareaActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.etask.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/activity_register">
+        <action
+            android:id="@+id/action_registerFragment_to_tareaActivity2"
+            app:destination="@id/tareaActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/tareaActivity2"
+        android:name="com.example.etask.TareaActivity"
+        android:label="TareaActivity"
+        tools:layout="@layout/activity_tareas"/>
+</navigation>

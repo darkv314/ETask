@@ -43,4 +43,18 @@
     <string name="faqInfo">Preguntas y respuestas frecuentes</string>
     <string name="inicio">Desde</string>
     <string name="fin">Hasta</string>
+    <string name="bienvenida">Bienvenido</string>
+    <string name="asGuest">Acceder como invitado</string>
+    <string name="asMail">Iniciar sesión con correo</string>
+    <string name="noregister">¿No estas registrado en nuestra pp?</string>
+    <string name="register">Crear una nueva cuenta</string>
+    <string name="verifyAndDoSession">Verificar datos e iniciar sesión</string>
+    <string name="enterAsGuest">Ingresando como invitado</string>
+    <string name="guestUname">Nombre de usuario de invitado</string>
+    <string name="logInGuested">Iniciar sesiójn como invitado</string>
+    <string name="rememberMe">Recuerda mi sesión</string>
+    <string name="welcome">Bienvenido de vuelta</string>
+    <string name="passwordAdmit">Con Contraseña</string>
+    <string name="logIn">Iniciar sesión</string>
+    <string name="useitnow">¡Empieza a utilizar ETask ahora!</string>
 </resources>

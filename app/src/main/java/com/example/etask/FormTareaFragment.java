@@ -154,6 +154,7 @@ public class FormTareaFragment extends Fragment {
 
             }
         } );
+
         binding.photoClickView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
