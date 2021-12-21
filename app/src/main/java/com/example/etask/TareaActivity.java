@@ -1,26 +1,33 @@
 package com.example.etask;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class TareaActivity extends AppCompatActivity {
     FloatingActionMenu addMenu, deleteMenu;
@@ -28,18 +35,44 @@ public class TareaActivity extends AppCompatActivity {
     FloatingActionButton deleteDay, deleteTask;
     FloatingActionButton search;
     ExtendedFloatingActionButton deleteButton;
+    ListView listView;
     Calendar calendar = Calendar.getInstance();
     int year, month, day;
     DatePickerDialog.OnDateSetListener setListener;
     String fecha;
+    TareaAdapter adapter;
+    Context context;
+    List<modelTarea> lista = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tareas);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        listView=findViewById(R.id.listaTareas);
+        adapter = new TareaAdapter(this, getData());
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                modelTarea t = lista.get(i);
+                Toast.makeText(getBaseContext(),t.getTitulo(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        setSupportActionBar(toolbar);
         initViews();
         addEvents();
+    }
+
+    private List<modelTarea> getData() {
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        lista.add(new modelTarea("hola1", "Esta es una descripcion larga basada en hechos reales", "10/12/2021 a 12/12/2021"));
+        return lista;
     }
 
     private void initViews() {

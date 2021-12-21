@@ -6,13 +6,19 @@
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/btn_selector.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/button.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/button_menu.xml" value="0.1" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/calendar.xml" value="0.1" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/circle.xml" value="0.1680921052631579" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/circulo.xml" value="0.1680921052631579" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/delete.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/form_shape.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/ic_user.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/primarymenu.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/resaltado.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/search_frame.xml" value="0.1" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/drawable/tarea.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/drawable/text_edit.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_boton_flotante.xml" value="0.264" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_correo.xml" value="0.2" />
@@ -20,10 +26,12 @@
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_register.xml" value="0.176" />
-        <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_tareas.xml" value="0.2" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_tareas.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/activity_user.xml" value="0.2" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/layout/circulo.xml" value="0.15789473684210525" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/content_main.xml" value="0.264" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/dialog_formularioporvoz.xml" value="0.4" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/layout/drawer_header.xml" value="0.1" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/fragment_deleteonetask.xml" value="0.2" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/fragment_designform.xml" value="0.4" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/fragment_first.xml" value="0.4" />
@@ -37,6 +45,9 @@
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/layout_search_bar.xml" value="0.4" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/layout_tarea_rapida.xml" value="0.4" />
         <entry key="..\:/Coding/ETask/app/src/main/res/layout/login_activity.xml" value="0.264" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/layout/tarea_model_layout.xml" value="0.1" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/menu/drawer_menu.xml" value="0.264" />
+        <entry key="..\:/Coding/ETask/app/src/main/res/menu/menu_main.xml" value="0.1" />
       </map>
     </option>
   </component>
